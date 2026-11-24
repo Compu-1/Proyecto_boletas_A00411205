@@ -1,0 +1,104 @@
+/* =====================================================================
+   Estilos globales: variables de color, tipografía, layout y botones.
+   Cada componente tiene además su propio archivo .css.
+   ===================================================================== */
+:root {
+    --color-primary: #5454e9;      /* azul Icesi */
+    --color-primary-dark: #3d3dc4;
+    --color-text: #1a1a1a;
+    --color-muted: #6b7280;
+    --color-border: #d1d5db;
+    --color-bg: #f3f4f6;
+    --color-card: #ffffff;
+    --color-success: #16a34a;
+    --color-warning: #d97706;
+    --color-danger: #dc2626;
+    --radius: 10px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    color: var(--color-text);
+    background: var(--color-bg);
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 16px;
+    padding: 0 16px 24px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.card {
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 16px 20px;
+}
+
+.card__title {
+    margin: 0 0 12px;
+    font-size: 1.15rem;
+}
+
+.muted {
+    color: var(--color-muted);
+    font-size: 0.85rem;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.btn--primary {
+    background: var(--color-primary);
+    color: #fff;
+    border: none;
+}
+
+.btn--primary:hover:not(:disabled) {
+    background: var(--color-primary-dark);
+}
+
+.btn--secondary {
+    background: #fff;
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
+}
+
+.btn--secondary:hover:not(:disabled) {
+    background: var(--color-bg);
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* En pantallas pequeñas, el panel lateral pasa debajo del plano */
+@media (max-width: 960px) {
+    .layout {
+        grid-template-columns: 1fr;
+    }
+}
