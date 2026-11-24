@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+    <!--
+        Esqueleto de la página. Cada elemento con id es el "contenedor" donde
+        un componente de JavaScript dibuja su contenido (ver src/index.js).
+        Webpack (HtmlWebpackPlugin) inyecta automáticamente el <script> del bundle.
+    -->
+    <header id="header"></header>
+
+    <main class="layout">
+        <section id="seat-map" class="card"></section>
+
+        <aside class="sidebar">
+            <section id="timer" class="card"></section>
+            <section id="cart" class="card"></section>
+            <section id="my-bookings" class="card"></section>
+        </aside>
+    </main>
+
+    <div id="checkout-modal"></div>
+    <div id="toast-container"></div>
+</body>
+</html>

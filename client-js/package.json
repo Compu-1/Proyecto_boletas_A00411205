@@ -1,0 +1,33 @@
+{
+  "name": "icesi-live-arena-client",
+  "version": "1.0.0",
+  "description": "Cliente web (JavaScript vainilla + Webpack) del sistema distribuido de reserva de boletas con ZeroC Ice",
+  "private": true,
+  "scripts": {
+    "slice": "node scripts/compile-slice.js",
+    "prestart": "npm run slice",
+    "start": "webpack serve --mode development",
+    "prebuild": "npm run slice",
+    "build": "webpack --mode production"
+  },
+  "keywords": [
+    "zeroc-ice",
+    "webpack",
+    "vanilla-js",
+    "rpc",
+    "websocket"
+  ],
+  "license": "ISC",
+  "dependencies": {
+    "ice": "3.7.110"
+  },
+  "devDependencies": {
+    "css-loader": "^7.1.5",
+    "html-webpack-plugin": "^5.6.8",
+    "slice2js": "3.7.110",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.113.0",
+    "webpack-cli": "^7.3.1",
+    "webpack-dev-server": "^6.1.0"
+  }
+}
