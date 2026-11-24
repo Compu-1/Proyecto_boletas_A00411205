@@ -16,6 +16,11 @@ subprojects {
         targetCompatibility = JavaVersion.VERSION_17
     }
 
+    // Los fuentes contienen tildes y ñ: compilar siempre en UTF-8 (en Windows el default es windows-1252)
+    tasks.withType(JavaCompile).configureEach {
+        options.encoding = 'UTF-8'
+    }
+
     dependencies {
         implementation 'com.zeroc:ice:3.7.10'
         testImplementation 'junit:junit:4.13.2'
