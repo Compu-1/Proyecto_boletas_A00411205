@@ -53,7 +53,7 @@ public class BookingServerApp {
             printNetworkInterfaces(port, wsPort);
             System.out.println("--------------------------------------------------------------------------");
             System.out.println("[INFO] Catálogo inicializado: Concierto Icesi Live Arena (90 asientos).");
-            System.out.println("[ALERTA] Concurrencia intencionalmente incompleta para fines didácticos.");
+            System.out.println("[OK] Concurrencia protegida: operaciones de inventario sincronizadas (synchronized).");
             System.out.println("[INFO] Presione Ctrl+C para detener el servidor.");
             System.out.println("==========================================================================");
 
